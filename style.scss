@@ -1,0 +1,328 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  padding: 0
+}
+@mixin flex ($direction, $justify, $align, $gap){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+.wrapper {
+  max-width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  @include flex (column, center, center, 50px);
+}
+
+.menu {
+  width: 100%;
+  margin-left: 210px;
+  @include flex(row, left, center, 20px);
+  .menu__item {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
+
+.banner {
+  width: 90%;
+  height: 690px;
+  background-image: url(images/apartment-building-city-with-copy-space.jpg);
+  border-radius: 60px;
+  .banner__header{
+    margin-top: 100px;
+    margin-left: 100px;
+    font-size: 60px;
+    font-weight: 400;
+    max-width: 60%;
+  }
+  .banner__text {
+    margin-left: 100px;
+    font-size: 18px;
+    max-width: 40%;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+  .banner__form{
+    margin-left: 100px;
+    padding-left: 3%;
+    border-radius: 15px;
+    background-color: rgb(242, 242, 242);
+    height: 65px;
+    width: 50%;
+    @include flex(row, left, center, 3%);
+    .banner__form__email{
+      width: 65%;
+      height: 40px;
+      border: none;
+      border-radius: 8px;
+      padding-left: 10px;
+      font-size: 1rem;
+    }
+    .banner__form__button{
+      text-decoration: none;
+      height: 40px;
+      width: 28%;
+      color: white;
+      background-color: black;
+      font-size: 16px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      
+    }
+  }
+}
+.city {
+  width: 100%;
+  padding: 50px 0 40px;
+  @include flex(row, center, center, 10%);
+  background-color: rgb(240, 239, 252);
+  .city__card{
+    @include flex(column, center, center, 10px);
+    .city__card__picture {
+      width: 187px;
+      height: 187px;
+      border-radius: 50%;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+    .city__card__picture__1{
+      background-image: url(images/city1.jpeg);
+    }
+    .city__card__picture__2{
+      background-image: url(images/city2.jpeg);
+    }
+    .city__card__picture__3{
+      background-image: url(images/city3.jpeg);
+    }
+    .city__card__header {
+      margin: 20px;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    .city__card__text {
+      margin: 5px;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+  }
+}
+.property {
+  @include flex(column, center, flex-start, 5px);
+  width: 90%;
+  .property__head{
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+  }
+  .property__button{
+    height: 40px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  .property__cards {
+    margin-top: 50px;
+    height: 660px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    .property__card{
+     @include flex(column, flex-end, center, 3px);
+     background-position: 50% 50%;
+     background-size: cover;
+     border-radius: 20px;
+     cursor: pointer;
+    }
+    .property__card__description {
+      height: 70px;
+      width: 80%;
+     @include flex(column, flex-start, flex-start, 0);
+      padding: 5% 5%;
+      background-color: white;
+      position: relative;
+      bottom: 5%;
+      border-radius: 12px;
+      .property__card__price {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+      .property__card__text {
+        margin-top: 5px;
+        font-size: 1.1rem;
+      }
+    } 
+  }
+}
+.property__card__1 {
+  background-image: url(images/card1.jpeg);
+ }
+ .property__card__2 {
+  background-image: url(images/card2.jpeg);
+ }
+ .property__card__3 {
+  background-image: url(images/card3.jpeg);
+ }
+ .property__card__4 {
+  background-image: url(images/card4.jpeg);
+ }
+ .property__card__5 {
+  background-image: url(images/card5.jpeg);
+ }
+ .property__card__6 {
+  background-image: url(images/card6.jpeg);
+ }
+
+.sale {
+  margin-top: 60px;
+  width: 90%;
+  height: 680px;
+  @include flex(row, center, center, 20px);
+  .sale__options {
+    width: calc(50% - 10px);
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(237, 237, 252);
+    .sale__options__header {
+      height: 150px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      margin-left: 50px;
+      padding-right: 30px;
+      font-size: 2.7rem;
+    }
+    .sale__options__block {
+      height: calc(100% - 200px);
+      display: grid;
+      grid-template-rows: repeat(3, 1f);
+      .sale__options__card{
+        @include flex(row, flex-start, center, 0);
+        .sale__options__card__pic{
+          width: 80px;
+          height: 80px;
+          margin-left: 40px;
+          margin-right: 30px;
+          background-color: rgb(186, 184, 245);
+          border-radius: 50%;
+          background-size: 75%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .sale__options__description {
+          max-width: calc(100% - 160px)
+        }
+        .sale__options__description__header {
+          margin-top: 4px;
+          margin-bottom: 5px;
+          font-size: 1.5rem;
+        }
+        .sale__options__description__text {
+          font-size: 16px;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-right: 50px;
+        }
+      }
+    }
+  }
+  .sale__options__card__pic__1{
+    background-image: url(images/icon1.svg);
+  }
+  .sale__options__card__pic__2{
+    background-image: url(images/icon2.svg);
+  }
+  .sale__options__card__pic__3{
+    background-image: url(images/icon3.svg);
+  }
+  .sale__picture {
+    width: calc(50% - 10px);
+    height: 100%;
+    background-image: url(images/pict1.jpeg);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 20px;
+  }
+}
+.figures {
+  height: 300px;
+  width: 100%;
+  background-color: rgb(246, 234, 234);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .figures__card {
+    @include flex(column, flex-start, center, 0);
+    .figures__card__number {
+      margin-top: 100px;
+      font-size: 40px;
+      font-weight: 600;
+    }
+    .figures__card__text {
+      margin-top: 20px;
+      max-width: 60%;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+}
+.object__types {
+  @include flex(column, center, flex-start, 5px);
+  width: 90%;
+  .object__types__head{
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+  }
+  .object__types__button{
+    height: 40px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  .object__types__cards {
+    margin-top: 30px;
+    width: 100%;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    .object__type__card {
+      @include flex(column, flex-start, center, 0);
+      background-color:  rgb(237, 237, 252);
+      border-radius: 20px;
+      .object__type__card__pic {
+        width: calc(100% - 60px);
+        height: 70%;
+        margin-top: 30px;
+        background-position: 51% 51%;
+        background-size: cover;
+        border-radius: 20px;
+      }
+      .object__type__card__pic__1 {
+        background-image: url(images/city1.jpeg);
+      }
+      .object__type__card__pic__2 {
+        background-image: url(images/house.jpeg);
+      }
+      .object__type__card__pic__3 {
+        background-image: url(images/apartments.jpeg);
+      }
+      .object__type__card__text {
+        font-size: 18px;
+      }
+    }
+  }
+}
