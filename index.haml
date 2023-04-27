@@ -1,4 +1,4 @@
--# https://nicepage.com/website-templates/preview/exclusive-apartments-4491331?device=desktop
+-# https://nicepage.com/website-templates/preview/exclusive-apartments-4491331?device=laptop
 %html{:lang => "en"}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -19,7 +19,7 @@
       .banner
         %h1.banner__header Лучший способ найти идеальную недвижимость
         %p.banner__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorum soluta nam ut! Reprehenderit voluptatem ab adipisci ea ratione perferendis sed rerum cum nisi enim?
-        .banner__form
+        %form.banner__form
           %input.banner__form__email{:id => "email", :type => "email", :name => "email", :placeholder => "Введите действительный e-mail адрес"}
           %button.banner__form__button{:type =>"submit"} ОТПРАВИТЬ
       .city
@@ -106,3 +106,16 @@
           .object__type__card
             .object__type__card__pic.object__type__card__pic__3
             %h5.object__type__card__text Апартаменты
+      .large__form
+        %h2.large__form__header Найди дом своей мечты
+        %p.large__form__text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, porro?
+        %form.large__form__block
+          .large__form__block__field
+            %label Имя
+            %input.large__form__input{:id => "name", :type => "text", :name => "name", :placeholder => "Введите имя"}
+          .large__form__block__field
+            %label Email
+            %input.large__form__input{:id => "email", :type => "email", :name => "email", :placeholder => "Введите действительный e-mail"}
+          %button.large__form__button{:type =>"submit"} ОТПРАВИТЬ
+      %footer 
+        %p.disclaimer Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur sequi ipsa ullam consectetur doloribus voluptatum odit error facilis cumque! Illum fugiat ipsum iste officiis id!

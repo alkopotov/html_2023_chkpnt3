@@ -14,6 +14,26 @@ body {
   align-items: center;
   gap: 50px;
 }
+@media (max-width: 1280px) {
+  .wrapper {
+    max-width: 80%;
+  }
+}
+@media (max-width: 1100px) {
+  .wrapper {
+    max-width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .wrapper {
+    max-width: 95%;
+  }
+}
+@media (max-width: 450px) {
+  .wrapper {
+    max-width: 99%;
+  }
+}
 
 .menu {
   width: 100%;
@@ -24,9 +44,20 @@ body {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 450px) {
+  .menu {
+    margin-left: 30px;
+    gap: 10px;
+  }
+}
 .menu .menu__item {
   font-size: 1.2rem;
   cursor: pointer;
+}
+@media (max-width: 450px) {
+  .menu .menu__item {
+    font-size: 12px;
+  }
 }
 
 .banner {
@@ -35,6 +66,13 @@ body {
   background-image: url(images/apartment-building-city-with-copy-space.jpg);
   border-radius: 60px;
 }
+@media (max-width: 450px) {
+  .banner {
+    padding-bottom: 20px;
+    height: auto;
+    border-radius: 20px;
+  }
+}
 .banner .banner__header {
   margin-top: 100px;
   margin-left: 100px;
@@ -42,12 +80,38 @@ body {
   font-weight: 400;
   max-width: 60%;
 }
+@media (max-width: 1280px) {
+  .banner .banner__header {
+    font-size: 48px;
+  }
+}
+@media (max-width: 450px) {
+  .banner .banner__header {
+    font-size: 36px;
+    margin-top: 30px;
+    margin-left: 40px;
+    max-width: 80%;
+  }
+}
 .banner .banner__text {
   margin-left: 100px;
   font-size: 18px;
   max-width: 40%;
   font-weight: 200;
   line-height: 1.5;
+}
+@media (max-width: 1280px) {
+  .banner .banner__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .banner .banner__text {
+    font-size: 14px;
+    margin-top: 30px;
+    margin-left: 40px;
+    max-width: 80%;
+  }
 }
 .banner .banner__form {
   margin-left: 100px;
@@ -62,6 +126,13 @@ body {
   align-items: center;
   gap: 3%;
 }
+@media (max-width: 450px) {
+  .banner .banner__form {
+    width: 90%;
+    margin: auto;
+    height: 50px;
+  }
+}
 .banner .banner__form .banner__form__email {
   width: 65%;
   height: 40px;
@@ -70,16 +141,28 @@ body {
   padding-left: 10px;
   font-size: 1rem;
 }
+@media (max-width: 450px) {
+  .banner .banner__form .banner__form__email {
+    font-size: 10px;
+    height: 30px;
+  }
+}
 .banner .banner__form .banner__form__button {
   text-decoration: none;
   height: 40px;
-  width: 28%;
+  width: 26%;
   color: white;
   background-color: black;
   font-size: 16px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
+}
+@media (max-width: 450px) {
+  .banner .banner__form .banner__form__button {
+    font-size: 10px;
+    height: 30px;
+  }
 }
 
 .city {
@@ -91,6 +174,12 @@ body {
   align-items: center;
   gap: 10%;
   background-color: rgb(240, 239, 252);
+}
+@media (max-width: 450px) {
+  .city {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 .city .city__card {
   display: flex;
@@ -106,6 +195,12 @@ body {
   background-position: 50% 50%;
   background-size: cover;
 }
+@media (max-width: 450px) {
+  .city .city__card .city__card__picture {
+    width: 125px;
+    height: 125px;
+  }
+}
 .city .city__card .city__card__picture__1 {
   background-image: url(images/city1.jpeg);
 }
@@ -120,10 +215,22 @@ body {
   font-size: 1.5rem;
   font-weight: 300;
 }
+@media (max-width: 450px) {
+  .city .city__card .city__card__header {
+    margin: 5px;
+    font-size: 22px;
+  }
+}
 .city .city__card .city__card__text {
   margin: 5px;
   font-size: 1.1rem;
   font-weight: 300;
+}
+@media (max-width: 400px) {
+  .city .city__card .city__card__text {
+    margin: 0;
+    font-size: 16px;
+  }
 }
 
 .property {
@@ -138,6 +245,11 @@ body {
   font-size: 2.7rem;
   margin-bottom: 10px;
 }
+@media (max-width: 450px) {
+  .property .property__head {
+    font-size: 36px;
+  }
+}
 .property .property__button {
   height: 40px;
   width: 200px;
@@ -148,6 +260,13 @@ body {
   font-size: 1.1rem;
   cursor: pointer;
 }
+@media (max-width: 450px) {
+  .property .property__button {
+    font-size: 12px;
+    width: 125px;
+    height: 35px;
+  }
+}
 .property .property__cards {
   margin-top: 50px;
   height: 660px;
@@ -155,6 +274,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
+}
+@media (max-width: 450px) {
+  .property .property__cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 .property .property__cards .property__card {
   display: flex;
@@ -186,9 +311,19 @@ body {
   font-size: 1.3rem;
   font-weight: 600;
 }
+@media (max-width: 450px) {
+  .property .property__cards .property__card__description .property__card__price {
+    font-size: 16px;
+  }
+}
 .property .property__cards .property__card__description .property__card__text {
   margin-top: 5px;
   font-size: 1.1rem;
+}
+@media (max-width: 450px) {
+  .property .property__cards .property__card__description .property__card__text {
+    font-size: 14px;
+  }
 }
 
 .property__card__1 {
@@ -225,11 +360,24 @@ body {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 450px) {
+  .sale {
+    margin-top: 20px;
+    flex-direction: column;
+    height: auto;
+  }
+}
 .sale .sale__options {
   width: calc(50% - 10px);
   height: 100%;
   border-radius: 20px;
   background-color: rgb(237, 237, 252);
+}
+@media (max-width: 450px) {
+  .sale .sale__options {
+    width: 98%;
+    padding-bottom: 20px;
+  }
 }
 .sale .sale__options .sale__options__header {
   height: 150px;
@@ -239,10 +387,21 @@ body {
   padding-right: 30px;
   font-size: 2.7rem;
 }
+@media (max-width: 450px) {
+  .sale .sale__options .sale__options__header {
+    font-size: 30px;
+    height: auto;
+  }
+}
 .sale .sale__options .sale__options__block {
   height: calc(100% - 200px);
   display: grid;
   grid-template-rows: repeat(3, 1f);
+}
+@media (max-width: 450px) {
+  .sale .sale__options .sale__options__block {
+    gap: 15px;
+  }
 }
 .sale .sale__options .sale__options__block .sale__options__card {
   display: flex;
@@ -270,11 +429,21 @@ body {
   margin-bottom: 5px;
   font-size: 1.5rem;
 }
+@media (max-width: 450px) {
+  .sale .sale__options .sale__options__block .sale__options__card .sale__options__description__header {
+    font-size: 20px;
+  }
+}
 .sale .sale__options .sale__options__block .sale__options__card .sale__options__description__text {
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 50px;
+}
+@media (max-width: 450px) {
+  .sale .sale__options .sale__options__block .sale__options__card .sale__options__description__text {
+    font-size: 12px;
+  }
 }
 .sale .sale__options__card__pic__1 {
   background-image: url(images/icon1.svg);
@@ -292,6 +461,12 @@ body {
   background-position: 50% 50%;
   background-size: cover;
   border-radius: 20px;
+}
+@media (max-width: 450px) {
+  .sale .sale__picture {
+    width: 99%;
+    height: 360px;
+  }
 }
 
 .figures {
@@ -313,12 +488,22 @@ body {
   font-size: 40px;
   font-weight: 600;
 }
+@media (max-width: 450px) {
+  .figures .figures__card .figures__card__number {
+    font-size: 30px;
+  }
+}
 .figures .figures__card .figures__card__text {
   margin-top: 20px;
   max-width: 60%;
   font-size: 20px;
   text-align: center;
   font-weight: 300;
+}
+@media (max-width: 450px) {
+  .figures .figures__card .figures__card__text {
+    font-size: 12px;
+  }
 }
 
 .object__types {
@@ -333,6 +518,11 @@ body {
   font-size: 2.7rem;
   margin-bottom: 10px;
 }
+@media (max-width: 450px) {
+  .object__types .object__types__head {
+    font-size: 36px;
+  }
+}
 .object__types .object__types__button {
   height: 40px;
   width: 200px;
@@ -343,6 +533,13 @@ body {
   font-size: 1.1rem;
   cursor: pointer;
 }
+@media (max-width: 450px) {
+  .object__types .object__types__button {
+    font-size: 12px;
+    width: 125px;
+    height: 35px;
+  }
+}
 .object__types .object__types__cards {
   margin-top: 30px;
   width: 100%;
@@ -350,6 +547,13 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+@media (max-width: 450px) {
+  .object__types .object__types__cards {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 .object__types .object__types__cards .object__type__card {
   display: flex;
@@ -359,6 +563,11 @@ body {
   gap: 0;
   background-color: rgb(237, 237, 252);
   border-radius: 20px;
+}
+@media (max-width: 450px) {
+  .object__types .object__types__cards .object__type__card {
+    height: 360px;
+  }
 }
 .object__types .object__types__cards .object__type__card .object__type__card__pic {
   width: calc(100% - 60px);
@@ -379,4 +588,100 @@ body {
 }
 .object__types .object__types__cards .object__type__card .object__type__card__text {
   font-size: 18px;
+}
+
+.large__form {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(246, 234, 234);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+@media (max-width: 450px) {
+  .large__form {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}
+.large__form .large__form__header {
+  font-size: 2.7rem;
+  margin-left: 60px;
+}
+.large__form .large__form__text {
+  font-size: 18px;
+  margin-left: 60px;
+}
+.large__form .large__form__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  width: calc(100% - 120px);
+  margin-left: 55px;
+}
+@media (max-width: 450px) {
+  .large__form .large__form__block {
+    width: 80%;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.large__form .large__form__block .large__form__block__field {
+  height: 40px;
+  width: 45%;
+}
+@media (max-width: 450px) {
+  .large__form .large__form__block .large__form__block__field {
+    width: 100%;
+  }
+}
+.large__form .large__form__block .large__form__block__field .large__form__input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  padding-left: 10px;
+}
+@media (max-width: 450px) {
+  .large__form .large__form__block .large__form__block__field .large__form__input {
+    width: 70%;
+  }
+}
+
+.large__form__button {
+  height: 40px;
+  width: 160px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.1rem;
+}
+@media (max-width: 450px) {
+  .large__form__button {
+    font-size: 12px;
+    width: 125px;
+    height: 35px;
+  }
+}
+
+footer {
+  margin-top: -50px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(45, 45, 45);
+}
+
+.disclaimer {
+  margin-top: 50px;
+  width: 60%;
+  text-align: center;
+  color: white;
+  font-weight: 200;
 }/*# sourceMappingURL=style.css.map */
